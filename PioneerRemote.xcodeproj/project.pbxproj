@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C3BAC640182EC796004F1664 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3BAC63F182EC796004F1664 /* Cocoa.framework */; };
+		C3BAC64A182EC796004F1664 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3BAC648182EC796004F1664 /* InfoPlist.strings */; };
+		C3BAC64C182EC796004F1664 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3BAC64B182EC796004F1664 /* main.m */; };
+		C3BAC650182EC796004F1664 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C3BAC64E182EC796004F1664 /* Credits.rtf */; };
+		C3BAC653182EC796004F1664 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3BAC652182EC796004F1664 /* AppDelegate.m */; };
+		C3BAC656182EC796004F1664 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3BAC654182EC796004F1664 /* MainMenu.xib */; };
+		C3BAC658182EC796004F1664 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3BAC657182EC796004F1664 /* Images.xcassets */; };
+		C3BAC65F182EC797004F1664 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3BAC65E182EC797004F1664 /* XCTest.framework */; };
+		C3BAC660182EC797004F1664 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3BAC63F182EC796004F1664 /* Cocoa.framework */; };
+		C3BAC668182EC797004F1664 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3BAC666182EC797004F1664 /* InfoPlist.strings */; };
+		C3BAC66A182EC797004F1664 /* PioneerRemoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3BAC669182EC797004F1664 /* PioneerRemoteTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C3BAC661182EC797004F1664 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3BAC634182EC796004F1664 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3BAC63B182EC796004F1664;
+			remoteInfo = PioneerRemote;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C3BAC63C182EC796004F1664 /* PioneerRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PioneerRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3BAC63F182EC796004F1664 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C3BAC642182EC796004F1664 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		C3BAC643182EC796004F1664 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C3BAC644182EC796004F1664 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C3BAC647182EC796004F1664 /* PioneerRemote-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PioneerRemote-Info.plist"; sourceTree = "<group>"; };
+		C3BAC649182EC796004F1664 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C3BAC64B182EC796004F1664 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C3BAC64D182EC796004F1664 /* PioneerRemote-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PioneerRemote-Prefix.pch"; sourceTree = "<group>"; };
+		C3BAC64F182EC796004F1664 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		C3BAC651182EC796004F1664 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C3BAC652182EC796004F1664 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C3BAC655182EC796004F1664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C3BAC657182EC796004F1664 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C3BAC65D182EC797004F1664 /* PioneerRemoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PioneerRemoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3BAC65E182EC797004F1664 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C3BAC665182EC797004F1664 /* PioneerRemoteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PioneerRemoteTests-Info.plist"; sourceTree = "<group>"; };
+		C3BAC667182EC797004F1664 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C3BAC669182EC797004F1664 /* PioneerRemoteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PioneerRemoteTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C3BAC639182EC796004F1664 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3BAC640182EC796004F1664 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3BAC65A182EC797004F1664 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3BAC660182EC797004F1664 /* Cocoa.framework in Frameworks */,
+				C3BAC65F182EC797004F1664 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C3BAC633182EC796004F1664 = {
+			isa = PBXGroup;
+			children = (
+				C3BAC645182EC796004F1664 /* PioneerRemote */,
+				C3BAC663182EC797004F1664 /* PioneerRemoteTests */,
+				C3BAC63E182EC796004F1664 /* Frameworks */,
+				C3BAC63D182EC796004F1664 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C3BAC63D182EC796004F1664 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3BAC63C182EC796004F1664 /* PioneerRemote.app */,
+				C3BAC65D182EC797004F1664 /* PioneerRemoteTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3BAC63E182EC796004F1664 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3BAC63F182EC796004F1664 /* Cocoa.framework */,
+				C3BAC65E182EC797004F1664 /* XCTest.framework */,
+				C3BAC641182EC796004F1664 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3BAC641182EC796004F1664 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3BAC642182EC796004F1664 /* AppKit.framework */,
+				C3BAC643182EC796004F1664 /* CoreData.framework */,
+				C3BAC644182EC796004F1664 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		C3BAC645182EC796004F1664 /* PioneerRemote */ = {
+			isa = PBXGroup;
+			children = (
+				C3BAC651182EC796004F1664 /* AppDelegate.h */,
+				C3BAC652182EC796004F1664 /* AppDelegate.m */,
+				C3BAC654182EC796004F1664 /* MainMenu.xib */,
+				C3BAC657182EC796004F1664 /* Images.xcassets */,
+				C3BAC646182EC796004F1664 /* Supporting Files */,
+			);
+			path = PioneerRemote;
+			sourceTree = "<group>";
+		};
+		C3BAC646182EC796004F1664 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C3BAC647182EC796004F1664 /* PioneerRemote-Info.plist */,
+				C3BAC648182EC796004F1664 /* InfoPlist.strings */,
+				C3BAC64B182EC796004F1664 /* main.m */,
+				C3BAC64D182EC796004F1664 /* PioneerRemote-Prefix.pch */,
+				C3BAC64E182EC796004F1664 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C3BAC663182EC797004F1664 /* PioneerRemoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				C3BAC669182EC797004F1664 /* PioneerRemoteTests.m */,
+				C3BAC664182EC797004F1664 /* Supporting Files */,
+			);
+			path = PioneerRemoteTests;
+			sourceTree = "<group>";
+		};
+		C3BAC664182EC797004F1664 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C3BAC665182EC797004F1664 /* PioneerRemoteTests-Info.plist */,
+				C3BAC666182EC797004F1664 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C3BAC63B182EC796004F1664 /* PioneerRemote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3BAC66D182EC797004F1664 /* Build configuration list for PBXNativeTarget "PioneerRemote" */;
+			buildPhases = (
+				C3BAC638182EC796004F1664 /* Sources */,
+				C3BAC639182EC796004F1664 /* Frameworks */,
+				C3BAC63A182EC796004F1664 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PioneerRemote;
+			productName = PioneerRemote;
+			productReference = C3BAC63C182EC796004F1664 /* PioneerRemote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C3BAC65C182EC797004F1664 /* PioneerRemoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3BAC670182EC797004F1664 /* Build configuration list for PBXNativeTarget "PioneerRemoteTests" */;
+			buildPhases = (
+				C3BAC659182EC797004F1664 /* Sources */,
+				C3BAC65A182EC797004F1664 /* Frameworks */,
+				C3BAC65B182EC797004F1664 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3BAC662182EC797004F1664 /* PBXTargetDependency */,
+			);
+			name = PioneerRemoteTests;
+			productName = PioneerRemoteTests;
+			productReference = C3BAC65D182EC797004F1664 /* PioneerRemoteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C3BAC634182EC796004F1664 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Burhan S Ahmed";
+				TargetAttributes = {
+					C3BAC65C182EC797004F1664 = {
+						TestTargetID = C3BAC63B182EC796004F1664;
+					};
+				};
+			};
+			buildConfigurationList = C3BAC637182EC796004F1664 /* Build configuration list for PBXProject "PioneerRemote" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C3BAC633182EC796004F1664;
+			productRefGroup = C3BAC63D182EC796004F1664 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C3BAC63B182EC796004F1664 /* PioneerRemote */,
+				C3BAC65C182EC797004F1664 /* PioneerRemoteTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C3BAC63A182EC796004F1664 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3BAC64A182EC796004F1664 /* InfoPlist.strings in Resources */,
+				C3BAC658182EC796004F1664 /* Images.xcassets in Resources */,
+				C3BAC650182EC796004F1664 /* Credits.rtf in Resources */,
+				C3BAC656182EC796004F1664 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3BAC65B182EC797004F1664 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3BAC668182EC797004F1664 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C3BAC638182EC796004F1664 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3BAC653182EC796004F1664 /* AppDelegate.m in Sources */,
+				C3BAC64C182EC796004F1664 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3BAC659182EC797004F1664 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3BAC66A182EC797004F1664 /* PioneerRemoteTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C3BAC662182EC797004F1664 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3BAC63B182EC796004F1664 /* PioneerRemote */;
+			targetProxy = C3BAC661182EC797004F1664 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C3BAC648182EC796004F1664 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3BAC649182EC796004F1664 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C3BAC64E182EC796004F1664 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3BAC64F182EC796004F1664 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		C3BAC654182EC796004F1664 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3BAC655182EC796004F1664 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		C3BAC666182EC797004F1664 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3BAC667182EC797004F1664 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C3BAC66B182EC797004F1664 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C3BAC66C182EC797004F1664 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C3BAC66E182EC797004F1664 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PioneerRemote/PioneerRemote-Prefix.pch";
+				INFOPLIST_FILE = "PioneerRemote/PioneerRemote-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C3BAC66F182EC797004F1664 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PioneerRemote/PioneerRemote-Prefix.pch";
+				INFOPLIST_FILE = "PioneerRemote/PioneerRemote-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C3BAC671182EC797004F1664 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PioneerRemote.app/Contents/MacOS/PioneerRemote";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PioneerRemote/PioneerRemote-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PioneerRemoteTests/PioneerRemoteTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C3BAC672182EC797004F1664 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PioneerRemote.app/Contents/MacOS/PioneerRemote";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PioneerRemote/PioneerRemote-Prefix.pch";
+				INFOPLIST_FILE = "PioneerRemoteTests/PioneerRemoteTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C3BAC637182EC796004F1664 /* Build configuration list for PBXProject "PioneerRemote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3BAC66B182EC797004F1664 /* Debug */,
+				C3BAC66C182EC797004F1664 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3BAC66D182EC797004F1664 /* Build configuration list for PBXNativeTarget "PioneerRemote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3BAC66E182EC797004F1664 /* Debug */,
+				C3BAC66F182EC797004F1664 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C3BAC670182EC797004F1664 /* Build configuration list for PBXNativeTarget "PioneerRemoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3BAC671182EC797004F1664 /* Debug */,
+				C3BAC672182EC797004F1664 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C3BAC634182EC796004F1664 /* Project object */;
+}

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3338114182FEB0900F9BF5A /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = C3338113182FEB0900F9BF5A /* Track.m */; };
+		C3A38AB218316A1700D5034F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A38AB118316A1700D5034F /* Security.framework */; };
+		C3A38AB518326CBF00D5034F /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A38AB418326CBF00D5034F /* GCDAsyncSocket.m */; };
 		C3BAC640182EC796004F1664 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3BAC63F182EC796004F1664 /* Cocoa.framework */; };
 		C3BAC64A182EC796004F1664 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3BAC648182EC796004F1664 /* InfoPlist.strings */; };
 		C3BAC64C182EC796004F1664 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3BAC64B182EC796004F1664 /* main.m */; };
@@ -31,6 +34,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C3338112182FEB0900F9BF5A /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
+		C3338113182FEB0900F9BF5A /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
+		C3A38AB118316A1700D5034F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C3A38AB318326CBF00D5034F /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = SOURCE_ROOT; };
+		C3A38AB418326CBF00D5034F /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = SOURCE_ROOT; };
 		C3BAC63C182EC796004F1664 /* PioneerRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PioneerRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3BAC63F182EC796004F1664 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C3BAC642182EC796004F1664 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -57,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3A38AB218316A1700D5034F /* Security.framework in Frameworks */,
 				C3BAC640182EC796004F1664 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +104,7 @@
 		C3BAC63E182EC796004F1664 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C3A38AB118316A1700D5034F /* Security.framework */,
 				C3BAC63F182EC796004F1664 /* Cocoa.framework */,
 				C3BAC65E182EC797004F1664 /* XCTest.framework */,
 				C3BAC641182EC796004F1664 /* Other Frameworks */,
@@ -115,11 +125,15 @@
 		C3BAC645182EC796004F1664 /* PioneerRemote */ = {
 			isa = PBXGroup;
 			children = (
+				C3A38AB318326CBF00D5034F /* GCDAsyncSocket.h */,
+				C3A38AB418326CBF00D5034F /* GCDAsyncSocket.m */,
 				C3BAC651182EC796004F1664 /* AppDelegate.h */,
 				C3BAC652182EC796004F1664 /* AppDelegate.m */,
 				C3BAC654182EC796004F1664 /* MainMenu.xib */,
 				C3BAC657182EC796004F1664 /* Images.xcassets */,
 				C3BAC646182EC796004F1664 /* Supporting Files */,
+				C3338112182FEB0900F9BF5A /* Track.h */,
+				C3338113182FEB0900F9BF5A /* Track.m */,
 			);
 			path = PioneerRemote;
 			sourceTree = "<group>";
@@ -252,6 +266,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3A38AB518326CBF00D5034F /* GCDAsyncSocket.m in Sources */,
+				C3338114182FEB0900F9BF5A /* Track.m in Sources */,
 				C3BAC653182EC796004F1664 /* AppDelegate.m in Sources */,
 				C3BAC64C182EC796004F1664 /* main.m in Sources */,
 			);
@@ -464,6 +480,7 @@
 				C3BAC66F182EC797004F1664 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C3BAC670182EC797004F1664 /* Build configuration list for PBXNativeTarget "PioneerRemoteTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +489,7 @@
 				C3BAC672182EC797004F1664 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

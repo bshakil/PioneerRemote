@@ -17,7 +17,9 @@
 	GCDAsyncSocket *asyncSocket;
     NSString *StaticPower;
     float currentVolume;
+    NSString *LastInstruction;
     NSWindow *__unsafe_unretained window;
+    
 }
 @property (unsafe_unretained) IBOutlet NSWindow *window;
 //@property (assign) IBOutlet NSWindow *window;

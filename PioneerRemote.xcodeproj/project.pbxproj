@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C30F8BD2188C56270098A1DA /* up-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C30F8BD1188C56270098A1DA /* up-arrow.png */; };
 		C3338114182FEB0900F9BF5A /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = C3338113182FEB0900F9BF5A /* Track.m */; };
 		C3A38AB218316A1700D5034F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A38AB118316A1700D5034F /* Security.framework */; };
 		C3A38AB518326CBF00D5034F /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A38AB418326CBF00D5034F /* GCDAsyncSocket.m */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C30F8BD1188C56270098A1DA /* up-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "up-arrow.png"; sourceTree = "<group>"; };
 		C3338112182FEB0900F9BF5A /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
 		C3338113182FEB0900F9BF5A /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
 		C3A38AB118316A1700D5034F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -85,6 +87,7 @@
 		C3BAC633182EC796004F1664 = {
 			isa = PBXGroup;
 			children = (
+				C30F8BD1188C56270098A1DA /* up-arrow.png */,
 				C3BAC645182EC796004F1664 /* PioneerRemote */,
 				C3BAC663182EC797004F1664 /* PioneerRemoteTests */,
 				C3BAC63E182EC796004F1664 /* Frameworks */,
@@ -246,6 +249,7 @@
 			files = (
 				C3BAC64A182EC796004F1664 /* InfoPlist.strings in Resources */,
 				C3BAC658182EC796004F1664 /* Images.xcassets in Resources */,
+				C30F8BD2188C56270098A1DA /* up-arrow.png in Resources */,
 				C3BAC650182EC796004F1664 /* Credits.rtf in Resources */,
 				C3BAC656182EC796004F1664 /* MainMenu.xib in Resources */,
 			);

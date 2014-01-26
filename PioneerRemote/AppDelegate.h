@@ -30,12 +30,16 @@
 
 @property (weak) IBOutlet NSTextField *hostAddress;
 @property (weak) IBOutlet NSTextField *hostPort;
+@property (weak) IBOutlet NSTextField *rokuAddress;
 
 @property (weak) IBOutlet NSTextField *connectStatus;
 @property (weak) IBOutlet NSButton *connectButton;
 
 - (IBAction)mute:(id)sender;
 - (IBAction)takeFloatValueForVolumeFrom:(id)sender;
+@property (weak) IBOutlet NSButton *RokuRight;
+@property (weak) IBOutlet NSTextField *RokuKeyboard;
+
 - (void)updateUserInterface;
 - (void)QueryVolume;
 - (void)connectReceiver;

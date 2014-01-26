@@ -28,67 +28,155 @@
     [self QueryVolume];
     
 }
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication {
+    return YES;
+}
 - (IBAction)RokuUp:(id)sender {
     
-    // In body data for the 'application/x-www-form-urlencoded' content type,
-    // form fields are separated by an ampersand. Note the absence of a
-    // leading ampersand.
-    NSString *bodyData = @"";
+    [self RokuSendDown:@"up"];
+    [NSThread sleepForTimeInterval:0.1];
+    [self RokuSendUp:@"up"];
+}
+
+- (IBAction)RokuDown:(id)sender {
+    [self RokuSendDown:@"down"];
+    [NSThread sleepForTimeInterval:0.1];
+    [self RokuSendUp:@"down"];
+}
+
+- (IBAction)RokuRight:(id)sender {
+    [self RokuSendDown:@"right"];
+    [NSThread sleepForTimeInterval:0.1];
+    [self RokuSendUp:@"right"];
+}
+
+- (IBAction)RokuLeft:(id)sender {
+    [self RokuSendDown:@"left"];
+    [NSThread sleepForTimeInterval:0.1];
+    [self RokuSendUp:@"left"];
+}
+
+- (IBAction)RokuOK:(id)sender {
+    [self RokuSendDown:@"select"];
+    [NSThread sleepForTimeInterval:0.1];
+    [self RokuSendUp:@"select"];
+}
+
+
+- (IBAction)RokuPlay:(id)sender {
+    [self RokuSendDown:@"play"];
+    [NSThread sleepForTimeInterval:0.1];
+    [self RokuSendUp:@"play"];
+}
+
+- (IBAction)RokuFwd:(id)sender {
+    [self RokuSendDown:@"fwd"];
+    [NSThread sleepForTimeInterval:0.1];
+    [self RokuSendUp:@"fwd"];
+}
+
+- (IBAction)RokuRev:(id)sender {
+    [self RokuSendDown:@"rev"];
+    [NSThread sleepForTimeInterval:0.1];
+    [self RokuSendUp:@"rev"];
+}
+
+- (IBAction)RokuBack:(id)sender {
+    [self RokuSendDown:@"back"];
+    [NSThread sleepForTimeInterval:0.1];
+    [self RokuSendUp:@"back"];
+}
+
+- (IBAction)RokuHome:(id)sender {
+    [self RokuSendDown:@"home"];
+    [self RokuSendUp:@"home"];
+}
+//-(void)RokuSendDown:(NSString *)RokuCommand {
+//    NSString *RokuIP=self.rokuAddress.stringValue;
+//    NSTask *task = [[NSTask alloc] init];
+//    [task setLaunchPath:@"/usr/bin/curl"];
+//    NSString *URL1=[NSString stringWithFormat:@"http://%@:8060/keydown/%@",RokuIP,RokuCommand];
+//    NSArray *arguments = [NSArray arrayWithObjects:@"-d", @"",URL1, nil];
+//    [task setArguments:arguments];
+//    [task launch];
+//}
+//-(void)RokuSendUp:(NSString *)RokuCommand {
+//    NSString *RokuIP=self.rokuAddress.stringValue;
+//    NSTask *task = [[NSTask alloc] init];
+//    [task setLaunchPath:@"/usr/bin/curl"];
+//    NSString *URL1=[NSString stringWithFormat:@"http://%@:8060/keyup/%@",RokuIP,RokuCommand];
+//    NSArray *arguments = [NSArray arrayWithObjects:@"-d", @"",URL1, nil];
+//    [task setArguments:arguments];
+//    [task launch];
+//}
+-(void)RokuSendDown:(NSString *)RokuCommand {
     
-    NSMutableURLRequest *postRequestdown = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://192.168.2.81:8060/keydown/up"]];
-    NSMutableURLRequest *postRequestup = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://192.168.2.81:8060/keyup/up"]];
-    // Set the request's content type to application/x-www-form-urlencoded
-    [postRequestdown setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-    
-    // Designate the request a POST request and specify its body data
-    [postRequestdown setHTTPMethod:@"POST"];
-    [postRequestdown setHTTPBody:[NSData dataWithBytes:[bodyData UTF8String] length:strlen([bodyData UTF8String])]];
-    
-    [postRequestup setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-    
-    // Designate the request a POST request and specify its body data
-    [postRequestup setHTTPMethod:@"POST"];
-    [postRequestup setHTTPBody:[NSData dataWithBytes:[bodyData UTF8String] length:strlen([bodyData UTF8String])]];
-    
-    
+    NSString *RokuIP=self.rokuAddress.stringValue;
+    NSString *URL1=[NSString stringWithFormat:@"http://%@:8060/keydown/%@",RokuIP,RokuCommand];
+    NSMutableURLRequest *postRequestdown = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URL1]];
+        [postRequestdown setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+        [postRequestdown setHTTPMethod:@"POST"];
+          postRequestdown.timeoutInterval = 1;
     NSURLConnection *theConnectiondown=[[NSURLConnection alloc] initWithRequest:postRequestdown delegate:self];
-    if (!theConnectiondown) {
-    }
-    NSURLConnection *theConnectionup=[[NSURLConnection alloc] initWithRequest:postRequestup delegate:self];
-    if (!theConnectionup) {
-        
+    if(theConnectiondown)
+    {
+        //[theConnectiondown cancel];
     }
 }
 
--(void)RokuSend:(NSString *)RokuCommand {
-    
-    
-    NSString *bodyData = @"";
-    
-    NSMutableURLRequest *postRequestdown = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://192.168.2.81:8060/keydown/up"]];
-    NSMutableURLRequest *postRequestup = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://192.168.2.81:8060/keyup/up"]];
-    
-    [postRequestdown setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
 
-    [postRequestdown setHTTPMethod:@"POST"];
-    [postRequestdown setHTTPBody:[NSData dataWithBytes:[bodyData UTF8String] length:strlen([bodyData UTF8String])]];
+-(void)RokuSendUp:(NSString *)RokuCommand {
     
+    NSString *RokuIP=self.rokuAddress.stringValue;
+    NSString *URL2=[NSString stringWithFormat:@"http://%@:8060/keyup/%@",RokuIP,RokuCommand];
+    NSMutableURLRequest *postRequestup = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URL2]];
     [postRequestup setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-    
     [postRequestup setHTTPMethod:@"POST"];
-    [postRequestup setHTTPBody:[NSData dataWithBytes:[bodyData UTF8String] length:strlen([bodyData UTF8String])]];
-    
-    
-    NSURLConnection *theConnectiondown=[[NSURLConnection alloc] initWithRequest:postRequestdown delegate:self];
-    if (!theConnectiondown) {
-    }
+    postRequestup.timeoutInterval = 1;
     NSURLConnection *theConnectionup=[[NSURLConnection alloc] initWithRequest:postRequestup delegate:self];
-    if (!theConnectionup) {
-        
+    if(theConnectionup)
+    {
+        //[theConnectionup cancel];
     }
-
 }
 
+-(void)RokuSendKeyboard:(NSString *)RokuKeys {
+    
+    NSString *RokuIP=self.rokuAddress.stringValue;
+    NSString *URL2=[NSString stringWithFormat:@"http://%@:8060/keypress/Lit_",RokuIP];
+    char Character='a';
+    
+
+    
+        for (int i = 0; i < [RokuKeys length]; i++)
+        {
+            [NSThread sleepForTimeInterval:0.05];
+            Character=[RokuKeys characterAtIndex:i];
+            URL2=[NSString stringWithFormat:@"http://%@:8060/keypress/Lit_%c",RokuIP,Character];
+            NSMutableURLRequest *postRequestup = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URL2]];
+            [postRequestup setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+            [postRequestup setHTTPMethod:@"POST"];
+            NSURLConnection *theConnectionup=[[NSURLConnection alloc] initWithRequest:postRequestup delegate:self];
+            if(theConnectionup)
+            {
+                //[theConnectionup cancel];
+            }
+        }
+}
+- (IBAction)RokuBackKeyboard:(id)sender {
+    NSString *RokuIP=self.rokuAddress.stringValue;
+    NSString *URL2=[NSString stringWithFormat:@"http://%@:8060/keypress/Backspace",RokuIP];
+    NSMutableURLRequest *postRequestup = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URL2]];
+    [postRequestup setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [postRequestup setHTTPMethod:@"POST"];
+    postRequestup.timeoutInterval = 1;
+    NSURLConnection *theConnectionup=[[NSURLConnection alloc] initWithRequest:postRequestup delegate:self];
+}
+
+- (IBAction)RokuKeyboard:(id)sender {
+    NSString *RokuKeys=self.RokuKeyboard.stringValue;
+    [self RokuSendKeyboard:RokuKeys];
+}
 
 - (IBAction)PowerControl:(id)sender {
     NSString *welcomeMsg = @"?P\r";
@@ -235,6 +323,9 @@
         
     }
 }
+     
+                   
+                   
 - (void)pwrOnOff {
     if ([StaticPower isEqualToString:@"PWR0\r\n"]){
         NSString *welcomeMsg = @"PF\r";

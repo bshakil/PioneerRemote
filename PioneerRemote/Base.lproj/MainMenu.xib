@@ -669,7 +669,7 @@
                     <slider horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fd5-BY-kll">
                         <rect key="frame" x="584" y="41" width="26" height="403"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <sliderCell key="cell" continuous="YES" alignment="left" maxValue="185" doubleValue="5" tickMarkPosition="left" numberOfTickMarks="186" allowsTickMarkValuesOnly="YES" sliderType="linear" id="b8W-Qt-rE1"/>
+                        <sliderCell key="cell" continuous="YES" alignment="left" maxValue="185" doubleValue="5" tickMarkPosition="right" numberOfTickMarks="186" allowsTickMarkValuesOnly="YES" sliderType="linear" id="b8W-Qt-rE1"/>
                         <connections>
                             <action selector="takeFloatValueForVolumeFrom:" target="494" id="frA-4f-wHw"/>
                         </connections>
@@ -868,7 +868,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zBe-Ur-BWn">
-                        <rect key="frame" x="104" y="144" width="64" height="32"/>
+                        <rect key="frame" x="117" y="218" width="64" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="UP" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bo9-p8-CBm">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -879,31 +879,40 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dHP-n2-dIU">
-                        <rect key="frame" x="47" y="111" width="64" height="32"/>
+                        <rect key="frame" x="60" y="185" width="64" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Left" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FEq-of-kKx">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="RokuLeft:" target="494" id="wYh-Bt-cxW"/>
+                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="viq-hc-8zG">
-                        <rect key="frame" x="164" y="111" width="64" height="32"/>
+                        <rect key="frame" x="177" y="185" width="64" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Right" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bh9-lG-yBb">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="RokuRight:" target="494" id="I9X-33-UrW"/>
+                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PPv-oI-wuG">
-                        <rect key="frame" x="104" y="78" width="64" height="32"/>
+                        <rect key="frame" x="117" y="152" width="64" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Down" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qkr-Hz-9Ns">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="RokuDown:" target="494" id="Gwm-jo-Hzf"/>
+                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NOB-qt-Mb8">
-                        <rect key="frame" x="113" y="111" width="47" height="32"/>
+                        <rect key="frame" x="126" y="185" width="47" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Cql-op-YDG">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -912,49 +921,67 @@
 DQ
 </string>
                         </buttonCell>
+                        <connections>
+                            <action selector="RokuOK:" target="494" id="qpu-t4-MyC"/>
+                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q5w-8G-yBP">
-                        <rect key="frame" x="45" y="180" width="68" height="32"/>
+                        <rect key="frame" x="58" y="254" width="68" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="&lt;-" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sij-yk-Djt">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="RokuBack:" target="494" id="d0k-XO-fu7"/>
+                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i4B-Hl-qLq">
-                        <rect key="frame" x="164" y="180" width="64" height="32"/>
+                        <rect key="frame" x="177" y="254" width="64" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Home" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zFW-Y3-Tez">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="RokuHome:" target="494" id="JDo-g0-Qov"/>
+                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1DY-6T-BRP">
-                        <rect key="frame" x="95" y="20" width="82" height="32"/>
+                        <rect key="frame" x="108" y="94" width="82" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title=">||" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="asG-no-Ipp">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="RokuPlay:" target="494" id="Axf-RA-uLT"/>
+                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lxl-NL-Kme">
-                        <rect key="frame" x="177" y="20" width="82" height="32"/>
+                        <rect key="frame" x="190" y="94" width="82" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title=">>" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zdm-N7-5dd">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="RokuFwd:" target="494" id="mQk-9b-6gT"/>
+                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ll-H9-nAT">
-                        <rect key="frame" x="13" y="20" width="82" height="32"/>
+                        <rect key="frame" x="26" y="94" width="82" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="&lt;&lt;" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uDK-a8-WW5">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="RokuRev:" target="494" id="uJB-wV-ZS8"/>
+                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L8e-QA-Qhe">
-                        <rect key="frame" x="13" y="47" width="82" height="32"/>
+                        <rect key="frame" x="26" y="121" width="82" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="I-Replay" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hCe-ja-u3U">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -962,7 +989,7 @@ DQ
                         </buttonCell>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tq6-K5-gZd">
-                        <rect key="frame" x="177" y="47" width="82" height="32"/>
+                        <rect key="frame" x="190" y="121" width="82" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Info" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qKl-Yf-Jtc">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -995,15 +1022,49 @@ DQ
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                     </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xqw-LS-o0M">
+                        <rect key="frame" x="301" y="60" width="82" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Send" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="emF-n4-Kti">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="RokuKeyboard:" target="494" id="Z98-bb-VcU"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kSY-cN-eQW">
+                        <rect key="frame" x="24" y="66" width="265" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="jpQ-rR-QOw">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hy3-z1-6kj">
+                        <rect key="frame" x="378" y="60" width="82" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Del" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gJn-V1-OrC">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="RokuBackKeyboard:" target="494" id="fOz-s5-2nQ"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
         </window>
         <customObject id="494" customClass="AppDelegate">
             <connections>
+                <outlet property="RokuKeyboard" destination="kSY-cN-eQW" id="V4U-ge-zfm"/>
+                <outlet property="RokuRight" destination="viq-hc-8zG" id="hAF-zN-sqK"/>
                 <outlet property="connectButton" destination="a8Q-O4-xgv" id="Qqp-WI-igZ"/>
                 <outlet property="connectStatus" destination="1dI-EO-oCY" id="ww9-4q-dwP"/>
                 <outlet property="hostAddress" destination="bUu-Y1-gMe" id="5Rc-eR-MNn"/>
                 <outlet property="hostPort" destination="T2i-FQ-jC5" id="IKq-Md-KCH"/>
+                <outlet property="rokuAddress" destination="eYD-iS-MFs" id="Iwe-HC-Txd"/>
                 <outlet property="slider" destination="fd5-BY-kll" id="bBO-32-p1d"/>
                 <outlet property="test" destination="bUu-Y1-gMe" id="mli-LD-DDP"/>
                 <outlet property="textField" destination="jJT-ti-hlU" id="UU5-d1-bMc"/>

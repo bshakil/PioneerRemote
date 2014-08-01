@@ -23,7 +23,6 @@
     Track *aTrack = [[Track alloc] init];
     [self connectReceiver];
     [self setTrack:aTrack];
-    [self QueryVolume];
     [self updateUserInterface];
     [self QueryVolume];
     
@@ -225,6 +224,47 @@
     [asyncSocket writeData:welcomeData withTimeout:-1 tag:0];
 }
 
+- (IBAction)pUp:(id)sender {
+    NSString *welcomeMsg = @"CUP\r";
+    NSData *welcomeData = [welcomeMsg dataUsingEncoding:NSUTF8StringEncoding];
+    
+    [asyncSocket writeData:welcomeData withTimeout:-1 tag:0];
+}
+
+- (IBAction)pDown:(id)sender {
+    NSString *welcomeMsg = @"CDN\r";
+    NSData *welcomeData = [welcomeMsg dataUsingEncoding:NSUTF8StringEncoding];
+    
+    [asyncSocket writeData:welcomeData withTimeout:-1 tag:0];
+}
+
+- (IBAction)pRight:(id)sender {
+    NSString *welcomeMsg = @"CRI\r";
+    NSData *welcomeData = [welcomeMsg dataUsingEncoding:NSUTF8StringEncoding];
+    
+    [asyncSocket writeData:welcomeData withTimeout:-1 tag:0];
+}
+
+- (IBAction)pLeft:(id)sender {
+    NSString *welcomeMsg = @"CLE\r";
+    NSData *welcomeData = [welcomeMsg dataUsingEncoding:NSUTF8StringEncoding];
+    
+    [asyncSocket writeData:welcomeData withTimeout:-1 tag:0];
+}
+
+- (IBAction)pOk:(id)sender {
+    NSString *welcomeMsg = @"CEN\r";
+    NSData *welcomeData = [welcomeMsg dataUsingEncoding:NSUTF8StringEncoding];
+    
+    [asyncSocket writeData:welcomeData withTimeout:-1 tag:0];
+}
+- (IBAction)pHomeMenu:(id)sender {
+    NSString *welcomeMsg = @"HM\r";
+    NSData *welcomeData = [welcomeMsg dataUsingEncoding:NSUTF8StringEncoding];
+    
+    [asyncSocket writeData:welcomeData withTimeout:-1 tag:0];
+    
+}
 
 
 
@@ -265,6 +305,9 @@
     
 }
 - (IBAction)ConnectRemote:(id)sender {
+    [self connectReceiver];
+    [self updateUserInterface];
+    [self QueryVolume];
     
 }
 
@@ -317,13 +360,22 @@
     NSString *host = self.hostAddress.stringValue;
     int port = [self.hostPort.stringValue intValue];
     NSError *error = nil;
-    if (![asyncSocket connectToHost:host onPort:port error:&error])
+    if([self.connectButton.title isEqual:@"Connect"])
     {
+        if (![asyncSocket connectToHost:host onPort:port error:&error])
+        {
         [self.connectStatus setStringValue:@"Error"];
+        [asyncSocket disconnect];
         
+        }
     }
+    if([self.connectButton.title isEqual:@"Disconnect"])
+    {
+            [asyncSocket disconnect];
+    }
+    
 }
-     
+
                    
                    
 - (void)pwrOnOff {
@@ -369,6 +421,8 @@
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err
 {
     [self.connectStatus setStringValue:@"Disconnected"];
+    [self.connectButton setTitle:@"Connect"];
+
 }
 
 @end

@@ -25,9 +25,26 @@
     [self setTrack:aTrack];
     [self updateUserInterface];
     [self QueryVolume];
+    NSData *dataR = [[NSUserDefaults standardUserDefaults] objectForKey:@"RokuIP"];
+    NSString  *RokuIP = [NSKeyedUnarchiver unarchiveObjectWithData:dataR];
+    NSData *dataP = [[NSUserDefaults standardUserDefaults] objectForKey:@"PioneerIP"];
+    NSString  *PioneerIP = [NSKeyedUnarchiver unarchiveObjectWithData:dataP];
+    self.hostAddress.stringValue=PioneerIP;
+    self.rokuAddress.stringValue=RokuIP;
+    
+    
     
 }
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication {
+    NSString *RokuIP=self.rokuAddress.stringValue;
+    NSString *PioneerIP=self.hostAddress.stringValue;
+    NSData *dataR = [NSKeyedArchiver archivedDataWithRootObject:RokuIP];
+    NSData *dataP = [NSKeyedArchiver archivedDataWithRootObject:PioneerIP];
+
+    [[NSUserDefaults standardUserDefaults] setObject:dataR forKey:@"RokuIP"];
+    [[NSUserDefaults standardUserDefaults] setObject:dataP forKey:@"PioneerIP"];
+
+    [[NSUserDefaults standardUserDefaults] synchronize];
     return YES;
 }
 - (IBAction)RokuUp:(id)sender {

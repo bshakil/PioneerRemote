@@ -1,6 +1,6 @@
 //  
 //  GCDAsyncSocket.h
-//  
+//  //
 //  This class is in the public domain.
 //  Originally created by Robbie Hanson in Q3 2010.
 //  Updated and maintained by Deusty LLC and the Apple development community.
